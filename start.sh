@@ -7,14 +7,8 @@ pip install ghp-import
 
 # Install tons of latex:
 sudo apt-get install texlive-latex-base
-
-# Also install the recommended and extra fonts to avoid running into the error,
-# when trying to use pdflatex on latex files with more fonts.
+sudo apt-get install texlive-lang-cyrillic
 #sudo apt-get install texlive-fonts-recommended
 #sudo apt-get install texlive-fonts-extra
+#sudo apt-get install texlive-latex-extra
 
-# Install the extra packages
-# sudo apt-get install texlive-latex-extra
-
-# Hope it installs Russian for babel
-sudo apt-get install texlive-lang-cyrillic
