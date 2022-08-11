@@ -1,0 +1,7 @@
+.vscode/
+docs/_build/
+docs/_latex/
+.vscode/
+# FIXME: has not effect over pdf - still ignored
+!*.pdf
+!docs/_latex/dist/three-day-chaos-course.pdf
