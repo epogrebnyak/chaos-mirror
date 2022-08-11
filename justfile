@@ -16,6 +16,10 @@ check:
 build:
   - mudkip build
 
+# Start live-reload development server 
+serve:
+  - mudkip develop
+
 # Create LaTeX source files
 latex:
   - mudkip build --preset latex --output-dir docs/_latex
