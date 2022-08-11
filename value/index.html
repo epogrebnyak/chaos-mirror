@@ -31,7 +31,7 @@
     <link rel="index" title="Алфавитный указатель" href="../genindex/" />
     <link rel="search" title="Поиск" href="../search/" />
     <link rel="next" title="Глоссарий" href="../glossary/" />
-    <link rel="prev" title="Структура курса" href="../link/" /> 
+    <link rel="prev" title="Структура курса" href="../include_readme/" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,13 +50,20 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../link/">Структура курса</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../include_readme/">Структура курса</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Результаты обучения</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">Знания</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">Практические умения и навыки</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">Основные понятия и темы</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id3">1. Надежность традиционных и распределенных системы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id4">2. Как начать испытания</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">Как сделать хаос-испытания устойчивой практикой</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">Знания</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">Практические умения и навыки</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../glossary/">Глоссарий</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../links/">Ссылки и литература</a></li>
 </ul>
 
         </div>
@@ -94,25 +101,102 @@
 </a>
 </center>
 </div>
-<p>Слушатель курса получит следующие знания и практические навыки.</p>
 <section id="id2">
-<h2>Знания<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<h2>Основные понятия и темы<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h2>
+<section id="id3">
+<h3>1. Надежность традиционных и распределенных системы<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Надежность:</p>
+<ul class="simple">
+<li><p>важность для пользователей</p></li>
+<li><p>требования и SLA</p></li>
+<li><p>метрики и мониторинг</p></li>
+</ul>
+<p>Особенности распределенных систем:</p>
+<ul class="simple">
+<li><p>сложно спрогнозировать влияние большого числа случайных внешних факторов</p></li>
+<li><p>скрытое внутреннее состояние</p></li>
+<li><p>работает на стенде, не работает на проде</p></li>
+<li><p>по частям все работает, а вместе нет</p></li>
+<li><p>самовосстановление как желаемое поведение</p></li>
+</ul>
+<p>Основные идеи:</p>
+<ol class="arabic simple">
+<li><p>Сложность и масштаб информационных систем растет</p></li>
+<li><p>Поведение распределенных систем может сильно отличаться от ожидаемого</p></li>
+<li><p>Надежность нужно проверять:</p>
+<ul class="simple">
+<li><p>в окружении и конфигурациях, близких к проду <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> выбор стенда</p></li>
+<li><p>с нагрузкой, близкой к реальной <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> выбор стенда</p></li>
+<li><p>с различными ошибками и событиями внешней среды (самыми разрушительными или самыми частыми,
+уже наблюдаемыми или предполагаемыми) <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> дизайн chaos-испытаний</p></li>
+<li><p>со сложными сценариями, отражающими практику работы распределенных систем
+<code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> дизайн chaos-испытаний</p></li>
+<li><p>используя релевантный инструментарий <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> выбор инструментов</p></li>
+<li><p>делать это часто, на систематической основе <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> автоматизация</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id4">
+<h3>2. Как начать испытания<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>Разовое chaos-испытание:</p>
+<ul class="simple">
+<li><p>Логика эксперимента:</p>
+<ul>
+<li><p>&quot;устойчивое состояние&quot;</p></li>
+<li><p>&quot;гипотеза&quot; (точка отказа, условия и частота возникновения, характер сбоя)</p></li>
+<li><p>способ воспроизвести и увидеть отказ</p></li>
+<li><p>как использовать результаты</p></li>
+</ul>
+</li>
+<li><p>Подготовка и проведение испытания (стенд, мониторинг, нагрузка, выбор инструментов)</p></li>
+<li><p>Анализ и использование результатов</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Как сделать хаос-испытания устойчивой практикой<a class="headerlink" href="#id5" title="Permalink to this heading"></a></h3>
+<p>Систематические chaos-испытания:</p>
+<p>Условия:</p>
+<ul class="simple">
+<li><p>Важность надежности для бизнеса и клиентов компании</p></li>
+<li><p>Техническая зрелость (DevOps/SRE)</p></li>
+<li><p>Возможность дорабатывать системы (есть кому, есть мотивация)</p></li>
+</ul>
+<p>Мероприятия:</p>
+<ul class="simple">
+<li><p>Пробные разовые испытания, их обсуждение</p></li>
+<li><p>Систематизация опыта разовых chaos-испытаний,
+инициативные изменения в процессах работы команд</p></li>
+<li><p>Автоматизация и масштабирование chaos-испытаний,
+обязательные требования ко всем командам</p></li>
+<li><p>ROI хаос-испытаний</p></li>
+</ul>
+<p>Люди и команды:</p>
+<ul class="simple">
+<li><p>Требуемая квалификация chaos-инженера</p></li>
+<li><p>Варианты организации chaos-испытаний в компании</p></li>
+</ul>
+</section>
+</section>
+<section id="id6">
+<h2>Знания<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h2>
+<p>Слушатель курса получит следующие знания и практические навыки.</p>
 <ul class="simple">
 <li><p>Как строить процесс Chaos Engineering</p></li>
 <li><p>Какие навыки важны для хаос-инженера</p></li>
-<li><p>Получит представление об инцидентах и зависимостях от экспериментов</p></li>
+<li><p>Получит представление об инцидентах и зависимостях <strong>ЧЕГО?</strong> от экспериментов</p></li>
 <li><p>Научится считать ROI испытаний <strong>(навык, а не знания)</strong></p></li>
 <li><p>Получит представление об автоматизации хаос-испытаний</p></li>
 </ul>
 </section>
-<section id="id3">
-<h2>Практические умения и навыки<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h2>
+<section id="id7">
+<h2>Практические умения и навыки<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>Сможет простроить процесс ЧЕГО?, проаудировать процесс ЧЕГО?</p></li>
 <li><p>Сможет провести оценку необходимости проведения испытаний в конкретной системе</p></li>
 <li><p>Сможет составить матрицу испытаний системы</p></li>
-<li><p>Сможет провести испытания на системы базирующихся на linux, Windows, Kubernaties</p></li>
-<li><p>Сможет использовать популярные инструменты - tc, stress-ng, blade, blade - operator, chaosblade</p></li>
+<li><p>Сможет провести испытания систем, базирующихся на linux, Windows, Kubernetes</p></li>
+<li><p>Сможет использовать популярные инструменты - tc, stress-ng, blade, blade-operator, chaosblade</p></li>
 <li><p>Сможет простроить автоматизацию Jenkins + groovie</p></li>
 </ul>
 </section>
@@ -122,7 +206,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
-        <a href="../link/" class="btn btn-neutral float-left" title="Структура курса" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="../include_readme/" class="btn btn-neutral float-left" title="Структура курса" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
         <a href="../glossary/" class="btn btn-neutral float-right" title="Глоссарий" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
