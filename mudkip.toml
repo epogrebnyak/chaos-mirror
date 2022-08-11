@@ -1,5 +1,5 @@
 [mudkip]
-title = "three-day-chaos-course"
+title = "chaos-course"
 preset = "rtd"
 output_dir = "docs/_build"
 

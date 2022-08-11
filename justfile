@@ -1,4 +1,4 @@
-filename := "three-day-chaos-course"
+filename := "chaos-course"
 
 # List available commands
 list: 

@@ -4,6 +4,7 @@
 .. toctree::
    :maxdepth: 2
 
-   link.md
+   include_readme.md
    value.md
    glossary.rst
+   links.md
