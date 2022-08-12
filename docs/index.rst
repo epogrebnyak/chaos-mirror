@@ -4,7 +4,7 @@
 .. toctree::
    :maxdepth: 2
 
-   readme.md
+   README.md
    value_of_course.md
    glossary.rst
    links.md
