@@ -1,0 +1,17 @@
+TODO:
+
+- весь контент переносим в папку docs
+- делаем README рабочим документом
+- контент обновляем только в одном направлении - из закрытого репо -> сюда
+- ссылка в ридми на 
+  - https://github.com/epogrebnyak/borrowed-sphinx
+  - https://github.com/epogrebnyak/sphinx-pdf-with-mudkip 
+
+Экспериментальные фичи с генерацией PDF:
+
+- другие темы оформления 
+- watermark
+- better-apidoc
+- докер по русский текст
+- авторы 
+- копирайт
